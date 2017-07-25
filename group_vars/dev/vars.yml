@@ -1,0 +1,19 @@
+---
+# STS settings
+Sts.Role: arn:aws:iam::610547539895:role/admin
+Sts.Region: us-west-2
+
+# Elasticsearch settings
+Stack.Inputs.ElasticsearchKeyName: admin
+Stack.Inputs.ElasticsearchInstanceType: m4.large
+Stack.Inputs.ElasticsearchDesiredCount: '1'
+Stack.Inputs.ElasticsearchImageId: ami-ceb3afb7
+Stack.Inputs.ElasticsearchDockerImage: 610547539895.dkr.ecr.us-west-2.amazonaws.com/casecommons/elasticsearch
+Stack.Inputs.ElasticsearchDockerImageTag: '2.4'
+Stack.Inputs.ElasticsearchLoadBalancerPort: '9200'
+Stack.Inputs.ElasticsearchPort: '9200'
+Stack.Inputs.ElasticsearchHostname: dev-intake-api-es
+
+# Log settings
+Stack.Inputs.LogRetention: '30'
+
